@@ -9,7 +9,6 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 header{
-    height: 100vh;
     background-image: url(../images/cloud.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,6 +19,27 @@ header{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
+}
+.highlight{
+    color: #FF008E;
+}
+.primary-button{
+    outline: 0;
+    border: 0;
+    padding: 15px 20px;
+    background-image: linear-gradient(90deg, #b9116d, #FF008E);
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 7px 0 #940553;
+    position: relative;
+    top:0;
+}
+.primary-button:active{
+    top:5px;
+    box-shadow: 0 2px 0 #940553;
 }
 nav{
     display: flex;
@@ -39,4 +59,35 @@ nav{
     color: white;
     font-weight: 600;
     padding:15px 10px;
+}
+
+.banner{
+    height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.banner-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.banner-left h1{
+    font-size: 35px;
+    color: white;
+}
+.banner-left p{
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0; 
+}
+.banner-right img{
+    width: 100%;
+}
+.banner-right{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
 }
