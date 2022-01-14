@@ -77,6 +77,7 @@ nav{
 
 .banner{
     height: calc(100vh - 80px);
+    min-height: 500px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
@@ -187,4 +188,78 @@ nav{
      display: flex;
      justify-content: center;
      align-items: center;
+     margin-top: 50px;
+ }
+
+ /* nav bar */
+
+ #nav-toggler{
+     display: none;
+
+ }
+ .nav-toggler-icon{
+     display: none;
+     color: white;
+     font-size: 30px;
+ }
+
+
+ /* responsive css */
+
+ @media (max-width:950px){
+     .gallery{
+         grid-template-columns: repeat(2,1fr);
+     }
+     .banner-left h1{
+         font-size: 35px;
+     }
+ }
+
+ @media(max-width:800px){
+     .banner{
+         grid-template-columns: 1fr;
+         height: fit-content;
+     }
+     .feature,
+     .gallery,
+     .contact{
+         grid-template-columns: 1fr;
+
+     }
+     .photo{
+         text-align: center;
+     }
+     .photo img{
+         max-width: 350px;
+     }
+     .banner-left{
+         order: 2;
+         padding: 50px 0;
+     }
+     .nav-toggler-icon{
+        display: block;
+    }
+    .navigation{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        padding: 20px 0;
+        /* transform: translateY(-330px);
+        transition: .4s ease-in-out; */
+        transform: translateY(-400px);
+        transition: .4s ease-in-out;
+    }
+    .navigation li a{
+        color: #121212;
+    }
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0);
+        
+
+    }
+
  }
